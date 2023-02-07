@@ -48,7 +48,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install --upgrade platformio
       - name: Run build
-        run: pio run
+        run: pio run -e weact_mini_h743vitx
         
   check_:
     name: run static code analysis cppcheck
@@ -101,7 +101,7 @@ jobs:
         uses: SonarSource/sonarcloud-github-c-cpp@v1
       - name: Run build-wrapper
         run: |
-          build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} platformio run
+          build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} -e weact_mini_h743vitx
       - name: Archive build-wrapper output
         uses: actions/upload-artifact@v3
         with:
