@@ -1,0 +1,42 @@
+[
+    {
+        "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -o .pio\\build\\extra_unity_options\\src\\freertos.o -c -DPLATFORMIO=60106 -ICore\\Inc -ICore\\Src Core\\Src\\freertos.c",
+        "directory": "C:\\USER\\GitHub\\gitreinrom\\Dina\\Dina_pio",
+        "file": "C:\\USER\\GitHub\\gitreinrom\\Dina\\Dina_pio\\Core\\Src\\freertos.c"
+    },
+    {
+        "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -o .pio\\build\\extra_unity_options\\src\\main.o -c -DPLATFORMIO=60106 -ICore\\Inc -ICore\\Src Core\\Src\\main.c",
+        "directory": "C:\\USER\\GitHub\\gitreinrom\\Dina\\Dina_pio",
+        "file": "C:\\USER\\GitHub\\gitreinrom\\Dina\\Dina_pio\\Core\\Src\\main.c"
+    },
+    {
+        "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -o .pio\\build\\extra_unity_options\\src\\stm32h7xx_hal_msp.o -c -DPLATFORMIO=60106 -ICore\\Inc -ICore\\Src Core\\Src\\stm32h7xx_hal_msp.c",
+        "directory": "C:\\USER\\GitHub\\gitreinrom\\Dina\\Dina_pio",
+        "file": "C:\\USER\\GitHub\\gitreinrom\\Dina\\Dina_pio\\Core\\Src\\stm32h7xx_hal_msp.c"
+    },
+    {
+        "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -o .pio\\build\\extra_unity_options\\src\\stm32h7xx_hal_timebase_tim.o -c -DPLATFORMIO=60106 -ICore\\Inc -ICore\\Src Core\\Src\\stm32h7xx_hal_timebase_tim.c",
+        "directory": "C:\\USER\\GitHub\\gitreinrom\\Dina\\Dina_pio",
+        "file": "C:\\USER\\GitHub\\gitreinrom\\Dina\\Dina_pio\\Core\\Src\\stm32h7xx_hal_timebase_tim.c"
+    },
+    {
+        "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -o .pio\\build\\extra_unity_options\\src\\stm32h7xx_it.o -c -DPLATFORMIO=60106 -ICore\\Inc -ICore\\Src Core\\Src\\stm32h7xx_it.c",
+        "directory": "C:\\USER\\GitHub\\gitreinrom\\Dina\\Dina_pio",
+        "file": "C:\\USER\\GitHub\\gitreinrom\\Dina\\Dina_pio\\Core\\Src\\stm32h7xx_it.c"
+    },
+    {
+        "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -o .pio\\build\\extra_unity_options\\src\\syscalls.o -c -DPLATFORMIO=60106 -ICore\\Inc -ICore\\Src Core\\Src\\syscalls.c",
+        "directory": "C:\\USER\\GitHub\\gitreinrom\\Dina\\Dina_pio",
+        "file": "C:\\USER\\GitHub\\gitreinrom\\Dina\\Dina_pio\\Core\\Src\\syscalls.c"
+    },
+    {
+        "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -o .pio\\build\\extra_unity_options\\src\\sysmem.o -c -DPLATFORMIO=60106 -ICore\\Inc -ICore\\Src Core\\Src\\sysmem.c",
+        "directory": "C:\\USER\\GitHub\\gitreinrom\\Dina\\Dina_pio",
+        "file": "C:\\USER\\GitHub\\gitreinrom\\Dina\\Dina_pio\\Core\\Src\\sysmem.c"
+    },
+    {
+        "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -o .pio\\build\\extra_unity_options\\src\\system_stm32h7xx.o -c -DPLATFORMIO=60106 -ICore\\Inc -ICore\\Src Core\\Src\\system_stm32h7xx.c",
+        "directory": "C:\\USER\\GitHub\\gitreinrom\\Dina\\Dina_pio",
+        "file": "C:\\USER\\GitHub\\gitreinrom\\Dina\\Dina_pio\\Core\\Src\\system_stm32h7xx.c"
+    }
+]
