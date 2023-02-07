@@ -64,6 +64,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
+      - name: Run tests on the native platform
+        run: pio check
       - name: Install sonar-scanner and build-wrapper
         uses: SonarSource/sonarcloud-github-c-cpp@v1
       - name: Run build-wrapper
