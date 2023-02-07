@@ -34,7 +34,7 @@ jobs:
 
   
   build:
-    name: build Ubuntu und Windowa
+    name: build
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -50,7 +50,7 @@ jobs:
       - name: Run build
         run: pio run -e weact_mini_h743vitx
   
-  check_:
+  check:
     name: run static code analysis cppcheck
     runs-on: ubuntu-latest
     steps:
