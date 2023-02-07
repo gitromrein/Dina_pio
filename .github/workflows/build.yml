@@ -31,12 +31,16 @@ jobs:
   #       pip install --upgrade platformio
   #   - name: Run PlatformIO
   #     run: pio run -e debug
+  
   build_and_check:
     name: build with plattformio cli, run static code analysis on sonarcloud.io
-    runs-on: ubuntu-latest
+    #runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
     env:
-      SONAR_SCANNER_VERSION: 4.7.0.2747
-      SONAR_SERVER_URL: "https://sonarcloud.io"
       BUILD_WRAPPER_OUT_DIR: build_wrapper_output_directory # Directory where build-wrapper output will be placed
     steps:
       - uses: actions/checkout@v2
@@ -64,7 +68,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Run tests on the native platform
+      - name: Run Code Analyse CppCheck
         run: pio check
       - name: Install sonar-scanner and build-wrapper
         uses: SonarSource/sonarcloud-github-c-cpp@v1
