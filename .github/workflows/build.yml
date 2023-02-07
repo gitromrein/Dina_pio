@@ -84,7 +84,7 @@ jobs:
   
   build_and_check_mac:
     name: build, run static code analysis cppcheck. Mac 
-    runs-on: windows-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
         with:
