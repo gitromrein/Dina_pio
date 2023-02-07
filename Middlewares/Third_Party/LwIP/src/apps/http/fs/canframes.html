@@ -1,0 +1,582 @@
+<html>
+<head>
+	<title>DINA</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+	<link href="styles.css" rel="stylesheet">
+	<meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <meta charset="utf-8">
+</head>
+<body>
+	<header>
+        <div class="row">
+            <div class="column">
+                <!--
+                    <div class="title">DINA Komm-Modul (αlpha version)</div>
+                -->
+            </div>
+            <div class="column">
+				<a id="dina-logo_yellow" href="https://www.dina.de/">
+					<img src="img/dina_logo_yellow.png" alt="DINA logo" class="logo">
+				</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div id="navibar" class="navigation">
+            <div class="btn-group">
+                <button id="dummy-left">
+                    <span id="nav-left-border"  class="btns-border-left"></span>
+                </button>
+                <a href="index.html">
+                    <button id="Index">
+                        <span id="index-btn" class="btn-left">UDP Daten</span>
+                    </button>
+                </a>
+                <button id="Canframes" class="active-tab"> 
+                    <span id="can-frames-btn">CAN Daten</span>
+                </button>
+                <a href="settings.html">
+                    <button id="Settings">
+                        <span id="settings-btn" class="btn-right">Einstellungen</span>
+                    </button>
+                </a>
+                <button id="dummy-right">
+                    <span id="nav-right-border" class="btns-border-right"></span>
+                </button>
+
+				<!--
+					<div class="dropdown">
+						<div class="language" id="lan">EN &#9662;</div>
+						<div class="dropdown-content">
+							<form action="index.htm" target="_self" method="POST">
+								<input type="submit" name="Language" class="english" value="EN">
+							</form>
+							<form action="index_de.htm" target="_self" method="POST">
+								<input type="submit" name="Language" class="deutsch" value="DE">
+							</form>
+						</div>
+					</div>
+				-->
+            </div>
+        </div>
+
+        <div class="row-layout">
+            <!--
+                <div class="title2">DINA Komm-Modul (αlpha version)</div>
+            -->
+            <div class="column-layout-2">
+				<h2>CAN1 Rx:</h2>
+                <h3>Rohe Daten</h3>
+                <table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+                            <th>CAN ID</th>
+							<th>Byte 0</th>
+							<th>Byte 1</th>
+                            <th>Byte 2</th>
+                            <th>Byte 3</th>
+                            <th>Byte 4</th>
+                            <th>Byte 5</th>
+                            <th>Byte 6</th>
+                            <th>Byte 7</th>
+						</tr>
+						<tr>
+							<td class="description">DINA Designer</td>
+                            <td id="dsgn_1_can_id" class="value-can">0x788</td>
+							<td id="dsgn_1_byte_7" class="value-can">0</td>
+							<td id="dsgn_1_byte_6" class="value-can">0</td>
+                            <td id="dsgn_1_byte_5" class="value-can">0</td>
+                            <td id="dsgn_1_byte_4" class="value-can">0</td>
+                            <td id="dsgn_1_byte_3" class="value-can">0</td>
+                            <td id="dsgn_1_byte_2" class="value-can">0</td>
+                            <td id="dsgn_1_byte_1" class="value-can">0</td>
+                            <td id="dsgn_1_byte_0" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Fehler</td>
+                            <td id="erro_1_can_id" class="value-can">0x789</td>
+							<td id="erro_1_byte_7" class="value-can">0</td>
+							<td id="erro_1_byte_6" class="value-can">0</td>
+                            <td id="erro_1_byte_5" class="value-can">0</td>
+                            <td id="erro_1_byte_4" class="value-can">0</td>
+                            <td id="erro_1_byte_3" class="value-can">0</td>
+                            <td id="erro_1_byte_2" class="value-can">0</td>
+                            <td id="erro_1_byte_1" class="value-can">0</td>
+                            <td id="erro_1_byte_0" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 1</td>
+                            <td id="encoder_11_can_id" class="value-can">0x78A</td>
+							<td id="encoder_11_byte_7" class="value-can">0</td>
+							<td id="encoder_11_byte_6" class="value-can">0</td>
+                            <td id="encoder_11_byte_5" class="value-can">0</td>
+                            <td id="encoder_11_byte_4" class="value-can">0</td>
+                            <td id="encoder_11_byte_3" class="value-can">0</td>
+                            <td id="encoder_11_byte_2" class="value-can">0</td>
+                            <td id="encoder_11_byte_1" class="value-can">0</td>
+                            <td id="encoder_11_byte_0" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 2</td>
+                            <td id="encoder_12_can_id" class="value-can">0x78B</td>
+							<td id="encoder_12_byte_7" class="value-can">0</td>
+							<td id="encoder_12_byte_6" class="value-can">0</td>
+                            <td id="encoder_12_byte_5" class="value-can">0</td>
+                            <td id="encoder_12_byte_4" class="value-can">0</td>
+                            <td id="encoder_12_byte_3" class="value-can">0</td>
+                            <td id="encoder_12_byte_2" class="value-can">0</td>
+                            <td id="encoder_12_byte_1" class="value-can">0</td>
+                            <td id="encoder_12_byte_0" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 3</td>
+                            <td id="encoder_13_can_id" class="value-can">0x78C</td>
+							<td id="encoder_13_byte_7" class="value-can">0</td>
+							<td id="encoder_13_byte_6" class="value-can">0</td>
+                            <td id="encoder_13_byte_5" class="value-can">0</td>
+                            <td id="encoder_13_byte_4" class="value-can">0</td>
+                            <td id="encoder_13_byte_3" class="value-can">0</td>
+                            <td id="encoder_13_byte_2" class="value-can">0</td>
+                            <td id="encoder_13_byte_1" class="value-can">0</td>
+                            <td id="encoder_13_byte_0" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 4</td>
+                            <td id="encoder_14_can_id" class="value-can">0x78D</td>
+							<td id="encoder_14_byte_7" class="value-can">0</td>
+							<td id="encoder_14_byte_6" class="value-can">0</td>
+                            <td id="encoder_14_byte_5" class="value-can">0</td>
+                            <td id="encoder_14_byte_4" class="value-can">0</td>
+                            <td id="encoder_14_byte_3" class="value-can">0</td>
+                            <td id="encoder_14_byte_2" class="value-can">0</td>
+                            <td id="encoder_14_byte_1" class="value-can">0</td>
+                            <td id="encoder_14_byte_0" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 5</td>
+                            <td id="encoder_15_can_id" class="value-can">0x78E</td>
+							<td id="encoder_15_byte_7" class="value-can">0</td>
+							<td id="encoder_15_byte_6" class="value-can">0</td>
+                            <td id="encoder_15_byte_5" class="value-can">0</td>
+                            <td id="encoder_15_byte_4" class="value-can">0</td>
+                            <td id="encoder_15_byte_3" class="value-can">0</td>
+                            <td id="encoder_15_byte_2" class="value-can">0</td>
+                            <td id="encoder_15_byte_1" class="value-can">0</td>
+                            <td id="encoder_15_byte_0" class="value-can">0</td>
+						</tr>
+                        <tr>
+							<td class="description">Reserve</td>
+                            <td id="encoder_16_can_id" class="value-can">0x78F</td>
+							<td id="encoder_16_byte_7" class="value-can">0</td>
+							<td id="encoder_16_byte_6" class="value-can">0</td>
+                            <td id="encoder_16_byte_5" class="value-can">0</td>
+                            <td id="encoder_16_byte_4" class="value-can">0</td>
+                            <td id="encoder_16_byte_3" class="value-can">0</td>
+                            <td id="encoder_16_byte_2" class="value-can">0</td>
+                            <td id="encoder_16_byte_1" class="value-can">0</td>
+                            <td id="encoder_16_byte_0" class="value-can">0</td>
+						</tr>
+					</tbody>
+				</table>
+
+                <h3>Dezimale Daten</h3>
+                <table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+                            <th>CAN ID</th>
+							<th>Position</th>
+							<th>Geschwindigkeit</th>
+                            <th>Status 1</th>
+                            <th>Status 2</th>
+						</tr>
+    					<tr>
+							<td class="description">Encoder 1</td>
+                            <td id="encoder_11_dez_can_id" class="value-can">0x78A</td>
+							<td id="encoder_11_pos" class="value-can">0</td>
+							<td id="encoder_11_speed" class="value-can">0</td>
+                            <td id="encoder_11_status_1" class="value-can">0</td>
+                            <td id="encoder_11_status_2" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 2</td>
+                            <td id="encoder_12_dez_can_id" class="value-can">0x78B</td>
+							<td id="encoder_12_pos" class="value-can">0</td>
+							<td id="encoder_12_speed" class="value-can">0</td>
+                            <td id="encoder_12_status_1" class="value-can">0</td>
+                            <td id="encoder_12_status_2" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 3</td>
+                            <td id="encoder_13_dez_can_id" class="value-can">0x78C</td>
+							<td id="encoder_13_pos" class="value-can">0</td>
+							<td id="encoder_13_speed" class="value-can">0</td>
+                            <td id="encoder_13_status_1" class="value-can">0</td>
+                            <td id="encoder_13_status_2" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 4</td>
+                            <td id="encoder_14_dez_can_id" class="value-can">0x78D</td>
+                            <td id="encoder_14_pos" class="value-can">0</td>
+							<td id="encoder_14_speed" class="value-can">0</td>
+                            <td id="encoder_14_status_1" class="value-can">0</td>
+                            <td id="encoder_14_status_2" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 5</td>
+                            <td id="encoder_15_dez_can_id" class="value-can">0x78E</td>
+                            <td id="encoder_15_pos" class="value-can">0</td>
+							<td id="encoder_15_speed" class="value-can">0</td>
+                            <td id="encoder_15_status_1" class="value-can">0</td>
+                            <td id="encoder_15_status_2" class="value-can">0</td>
+						</tr>
+                        <tr>
+							<td class="description">Reserve</td>
+                            <td id="encoder_16_dez_can_id" class="value-can">0x78F</td>
+                            <td id="encoder_16_pos" class="value-can">0</td>
+							<td id="encoder_16_speed" class="value-can">0</td>
+                            <td id="encoder_16_status_1" class="value-can">0</td>
+                            <td id="encoder_16_status_2" class="value-can">0</td>
+						</tr>
+					</tbody>
+				</table>
+
+                <h2>CAN1 Tx:</h2>
+                <table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+							<th>CAN ID</th>
+                            <th>Byte 0</th>
+							<th>Byte 1</th>
+                            <th>Byte 2</th>
+                            <th>Byte 3</th>
+                            <th>Byte 4</th>
+                            <th>Byte 5</th>
+                            <th>Byte 6</th>
+                            <th>Byte 7</th>
+						</tr>
+						<tr>
+							<td class="description">FBV Daten</td>
+                            <td id="dsgn_1_can_id_tx" class="value-can">0x409</td>
+							<td id="dsgn_1_byte_7_tx" class="value-can">0</td>
+							<td id="dsgn_1_byte_6_tx" class="value-can">0</td>
+                            <td id="dsgn_1_byte_5_tx" class="value-can">0</td>
+                            <td id="dsgn_1_byte_4_tx" class="value-can">0</td>
+                            <td id="dsgn_1_byte_3_tx" class="value-can">0</td>
+                            <td id="dsgn_1_byte_2_tx" class="value-can">0</td>
+                            <td id="dsgn_1_byte_1_tx" class="value-can">0</td>
+                            <td id="dsgn_1_byte_0_tx" class="value-can">0</td>
+						</tr>
+                    </tbody>
+                </table>
+
+                <h2>FBV Bytes</h2>
+                <div id="fbv-zombie-bytes-auswahl">
+                    <span class="fbv-zombie-text"> FBV Byte auswahl <span class="beta">:</span></span>
+                    <div class="fbv-zombie">
+                        <div class="fbv-byte-selection">
+                            <span id="fbv-byte-selection-text">FBV Byte 0</span>
+                            <span id="fbv-byte-selection-arrow">&#9662;</span>
+                        </div>
+                        <!--
+                            <div class="fbv-zombie-content">
+                                <form action="canframes.html" target="_self" onsubmit="fbvByteSelect()">
+                                    <input type="submit" name="fbvByte_0" class="fbvByte-select" id="fbv_byte_0" value="BYTE 0">
+                                </form>
+                                <form action="" target="" method="POST">
+                                    <input type="submit" name="fbvByte_1" class="fbvByte-select" id="fbv_byte_1" value="BYTE 1">
+                                </form>
+                                <form action="" target="" method="POST">
+                                    <input type="submit" name="fbvByte_2" class="fbvByte-select" id="fbv_byte_2" value="BYTE 2">
+                                </form>
+                                <form action="" target="" method="POST">
+                                    <input type="submit" name="fbvByte_3" class="fbvByte-select" id="fbv_byte_3" value="BYTE 3">
+                                </form>
+                                <form action="" target="" method="POST">
+                                    <input type="submit" name="fbvByte_4" class="fbvByte-select" id="fbv_byte_4" value="BYTE 4">
+                                </form>
+                                <form action="" target="" method="POST">
+                                    <input type="submit" name="fbvByte_5" class="fbvByte-select" id="fbv_byte_5" value="BYTE 5">
+                                </form>
+                                <form action="" target="" method="POST">
+                                    <input type="submit" name="fbvByte_6" class="fbvByte-select" id="fbv_byte_6" value="BYTE 6">
+                                </form>
+                                <form action="" target="" method="POST">
+                                    <input type="submit" name="fbvByte_7" class="fbvByte-select" id="fbv_byte_7" value="BYTE 7">
+                                </form>
+                            </div>
+                        -->
+                    </div>
+                </div>
+
+                <form class="fbvz-form" action="canframes.html" target="_self" onsubmit="_ajaxSendFBVBytes()">
+                    <label class="container">
+                        <input id="fbv-in-bit_0" type="checkbox">Bit 0 &nbsp;
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input id="fbv-in-bit_1" type="checkbox">Bit 1 &nbsp;
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input id="fbv-in-bit_2" type="checkbox">Bit 2 &nbsp;
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input id="fbv-in-bit_3" type="checkbox">Bit 3 &nbsp;
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input id="fbv-in-bit_4" type="checkbox">Bit 4 &nbsp;
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input id="fbv-in-bit_5" type="checkbox">Bit 5 &nbsp;
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input id="fbv-in-bit_6" type="checkbox">Bit 6 &nbsp;
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                        <input id="fbv-in-bit_7" type="checkbox">Bit 7 &nbsp;
+                        <span class="checkmark"></span>
+                    </label>
+                    <input class="submit-button_right" type="submit" value="Setzen">
+                </form>
+            </div>	
+
+            <div class="column-layout-2">
+				<h2>CAN2 Rx:</h2>
+                <h3>Rohe Daten</h3>
+                <table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+                            <th>CAN ID</th>
+							<th>Byte 0</th>
+							<th>Byte 1</th>
+                            <th>Byte 2</th>
+                            <th>Byte 3</th>
+                            <th>Byte 4</th>
+                            <th>Byte 5</th>
+                            <th>Byte 6</th>
+                            <th>Byte 7</th>
+						</tr>
+						<tr>
+							<td class="description">DINA Designer</td>
+                            <td id="dsgn_2_can_id" class="value-can">0x788</td>
+							<td id="dsgn_2_byte_7" class="value-can">0</td>
+							<td id="dsgn_2_byte_6" class="value-can">0</td>
+                            <td id="dsgn_2_byte_5" class="value-can">0</td>
+                            <td id="dsgn_2_byte_4" class="value-can">0</td>
+                            <td id="dsgn_2_byte_3" class="value-can">0</td>
+                            <td id="dsgn_2_byte_2" class="value-can">0</td>
+                            <td id="dsgn_2_byte_1" class="value-can">0</td>
+                            <td id="dsgn_2_byte_0" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Fehler</td>
+                            <td id="erro_2_can_id" class="value-can">0x789</td>
+							<td id="erro_2_byte_7" class="value-can">0</td>
+							<td id="erro_2_byte_6" class="value-can">0</td>
+                            <td id="erro_2_byte_5" class="value-can">0</td>
+                            <td id="erro_2_byte_4" class="value-can">0</td>
+                            <td id="erro_2_byte_3" class="value-can">0</td>
+                            <td id="erro_2_byte_2" class="value-can">0</td>
+                            <td id="erro_2_byte_1" class="value-can">0</td>
+                            <td id="erro_2_byte_0" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 1</td>
+                            <td id="encoder_21_can_id" class="value-can">0x78A</td>
+							<td id="encoder_21_byte_7" class="value-can">0</td>
+							<td id="encoder_21_byte_6" class="value-can">0</td>
+                            <td id="encoder_21_byte_5" class="value-can">0</td>
+                            <td id="encoder_21_byte_4" class="value-can">0</td>
+                            <td id="encoder_21_byte_3" class="value-can">0</td>
+                            <td id="encoder_21_byte_2" class="value-can">0</td>
+                            <td id="encoder_21_byte_1" class="value-can">0</td>
+                            <td id="encoder_21_byte_0" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 2</td>
+                            <td id="encoder_22_can_id" class="value-can">0x78B</td>
+							<td id="encoder_22_byte_7" class="value-can">0</td>
+							<td id="encoder_22_byte_6" class="value-can">0</td>
+                            <td id="encoder_22_byte_5" class="value-can">0</td>
+                            <td id="encoder_22_byte_4" class="value-can">0</td>
+                            <td id="encoder_22_byte_3" class="value-can">0</td>
+                            <td id="encoder_22_byte_2" class="value-can">0</td>
+                            <td id="encoder_22_byte_1" class="value-can">0</td>
+                            <td id="encoder_22_byte_0" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 3</td>
+							<td id="encoder_23_can_id" class="value-can">0x78C</td>
+							<td id="encoder_23_byte_7" class="value-can">0</td>
+                            <td id="encoder_23_byte_6" class="value-can">0</td>
+                            <td id="encoder_23_byte_5" class="value-can">0</td>
+                            <td id="encoder_23_byte_4" class="value-can">0</td>
+                            <td id="encoder_23_byte_3" class="value-can">0</td>
+                            <td id="encoder_23_byte_2" class="value-can">0</td>
+                            <td id="encoder_23_byte_1" class="value-can">0</td>
+                            <td id="encoder_23_byte_0" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 4</td>
+                            <td id="encoder_24_can_id" class="value-can">0x78D</td>
+							<td id="encoder_24_byte_7" class="value-can">0</td>
+							<td id="encoder_24_byte_6" class="value-can">0</td>
+                            <td id="encoder_24_byte_5" class="value-can">0</td>
+                            <td id="encoder_24_byte_4" class="value-can">0</td>
+                            <td id="encoder_24_byte_3" class="value-can">0</td>
+                            <td id="encoder_24_byte_2" class="value-can">0</td>
+                            <td id="encoder_24_byte_1" class="value-can">0</td>
+                            <td id="encoder_24_byte_0" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 5</td>
+                            <td id="encoder_25_can_id" class="value-can">0x78E</td>
+							<td id="encoder_25_byte_7" class="value-can">0</td>
+							<td id="encoder_25_byte_6" class="value-can">0</td>
+                            <td id="encoder_25_byte_5" class="value-can">0</td>
+                            <td id="encoder_25_byte_4" class="value-can">0</td>
+                            <td id="encoder_25_byte_3" class="value-can">0</td>
+                            <td id="encoder_25_byte_2" class="value-can">0</td>
+                            <td id="encoder_25_byte_1" class="value-can">0</td>
+                            <td id="encoder_25_byte_0" class="value-can">0</td>
+						</tr>
+                        <tr>
+							<td class="description">Reserve</td>
+                            <td id="encoder_26_can_id" class="value-can">0x78F</td>
+							<td id="encoder_26_byte_7" class="value-can">0</td>
+							<td id="encoder_26_byte_6" class="value-can">0</td>
+                            <td id="encoder_26_byte_5" class="value-can">0</td>
+                            <td id="encoder_26_byte_4" class="value-can">0</td>
+                            <td id="encoder_26_byte_3" class="value-can">0</td>
+                            <td id="encoder_26_byte_2" class="value-can">0</td>
+                            <td id="encoder_26_byte_1" class="value-can">0</td>
+                            <td id="encoder_26_byte_0" class="value-can">0</td>
+						</tr>
+					</tbody>
+				</table>
+
+                <h3>Dezimale Daten</h3>
+                <table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+                            <th>CAN ID</th>
+							<th>Position</th>
+							<th>Geschwindigkeit</th>
+                            <th>Status 1</th>
+                            <th>Status 2</th>
+						</tr>
+    					<tr>
+							<td class="description">Encoder 1</td>
+							<td id="encoder_21_dez_can_id" class="value-can">0x78A</td>
+                            <td id="encoder_21_pos" class="value-can">0</td>
+							<td id="encoder_21_speed" class="value-can">0</td>
+                            <td id="encoder_21_status_1" class="value-can">0</td>
+                            <td id="encoder_21_status_2" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 2</td>
+                            <td id="encoder_22_dez_can_id" class="value-can">0x78B</td>
+							<td id="encoder_22_pos" class="value-can">0</td>
+							<td id="encoder_22_speed" class="value-can">0</td>
+                            <td id="encoder_22_status_1" class="value-can">0</td>
+                            <td id="encoder_22_status_2" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 3</td>
+                            <td id="encoder_23_dez_can_id" class="value-can">0x78C</td>
+							<td id="encoder_23_pos" class="value-can">0</td>
+							<td id="encoder_23_speed" class="value-can">0</td>
+                            <td id="encoder_23_status_1" class="value-can">0</td>
+                            <td id="encoder_23_status_2" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 4</td>
+                            <td id="encoder_24_dez_can_id" class="value-can">0x78D</td>
+                            <td id="encoder_24_pos" class="value-can">0</td>
+							<td id="encoder_24_speed" class="value-can">0</td>
+                            <td id="encoder_24_status_1" class="value-can">0</td>
+                            <td id="encoder_24_status_2" class="value-can">0</td>
+						</tr>
+						<tr>
+							<td class="description">Encoder 5</td>
+                            <td id="encoder_25_dez_can_id" class="value-can">0x78E</td>
+                            <td id="encoder_25_pos" class="value-can">0</td>
+							<td id="encoder_25_speed" class="value-can">0</td>
+                            <td id="encoder_25_status_1" class="value-can">0</td>
+                            <td id="encoder_25_status_2" class="value-can">0</td>
+						</tr>
+                        <tr>
+							<td class="description">Reserve</td>
+                            <td id="encoder_26_dez_can_id" class="value-can">0x78F</td>
+                            <td id="encoder_26_pos" class="value-can">0</td>
+							<td id="encoder_26_speed" class="value-can">0</td>
+                            <td id="encoder_26_status_1" class="value-can">0</td>
+                            <td id="encoder_26_status_2" class="value-can">0</td>
+						</tr>
+					</tbody>
+				</table>
+
+                <h2>CAN2 Tx:</h2>
+                <table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+                            <th>CAN ID</th>
+							<th>Byte 0</th>
+							<th>Byte 1</th>
+                            <th>Byte 2</th>
+                            <th>Byte 3</th>
+                            <th>Byte 4</th>
+                            <th>Byte 5</th>
+                            <th>Byte 6</th>
+                            <th>Byte 7</th>
+						</tr>
+						<tr>
+							<td class="description">FBV Daten</td>
+                            <td id="dsgn_2_can_id_tx" class="value-can">0x409</td>
+							<td id="dsgn_2_byte_7_tx" class="value-can">0</td>
+							<td id="dsgn_2_byte_6_tx" class="value-can">0</td>
+                            <td id="dsgn_2_byte_5_tx" class="value-can">0</td>
+                            <td id="dsgn_2_byte_4_tx" class="value-can">0</td>
+                            <td id="dsgn_2_byte_3_tx" class="value-can">0</td>
+                            <td id="dsgn_2_byte_2_tx" class="value-can">0</td>
+                            <td id="dsgn_2_byte_1_tx" class="value-can">0</td>
+                            <td id="dsgn_2_byte_0_tx" class="value-can">0</td>
+						</tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row-layout">
+        <footer>
+				<!--
+					<div class="copyright">
+						<p>2023 <a id="dina-link" href="https://www.dina.de/">DINA</a> &copy;</p> 
+					</div>
+				-->
+				<a href="https://www.dina.de/">
+					<img src="img/dina_logo_yellow.png" alt="DINA logo" class="logo_footer">
+				</a>
+        </footer>
+    </div>
+</div>
+
+<script src="canjscript.js" type="text/javascript">
+</script>
+
+</body>
+</html>

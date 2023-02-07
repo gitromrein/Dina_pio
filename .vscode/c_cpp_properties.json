@@ -1,0 +1,115 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "c:/USER/GitHub/DINA/pio_new/Core/Inc",
+                "c:/USER/GitHub/DINA/pio_new",
+                "c:/USER/GitHub/DINA/pio_new/lib/STLinkedResources",
+                "c:/USER/GitHub/DINA/pio_new/Patches",
+                "c:/USER/GitHub/DINA/pio_new/Drivers/STM32H7xx_HAL_Driver/Inc",
+                "c:/USER/GitHub/DINA/pio_new/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy",
+                "c:/USER/GitHub/DINA/pio_new/Drivers/CMSIS/Device/ST/STM32H7xx/Include",
+                "c:/USER/GitHub/DINA/pio_new/Drivers/CMSIS/Include",
+                "c:/USER/GitHub/DINA/pio_new/Application/Tasks",
+                "c:/USER/GitHub/DINA/pio_new/Application/Common",
+                "c:/USER/GitHub/DINA/pio_new/Application/Modules",
+                "c:/USER/GitHub/DINA/pio_new/Application/Modules/PARAM",
+                "c:/USER/GitHub/DINA/pio_new/Application/Modules/FDCAN1",
+                "c:/USER/GitHub/DINA/pio_new/Application/Modules/FDCAN2",
+                "c:/USER/GitHub/DINA/pio_new/Application/Modules/ERROR",
+                "c:/USER/GitHub/DINA/pio_new/Application/Modules/WEBS",
+                "c:/USER/GitHub/DINA/pio_new/Application/Modules/UDPS",
+                "c:/USER/GitHub/DINA/pio_new/LWIP/Target",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/system",
+                "c:/USER/GitHub/DINA/pio_new/Drivers/BSP/Components/lan8742",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/netif/ppp",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/lwip",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/lwip/apps",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/lwip/priv",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/lwip/prot",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/netif",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/compat/posix",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/compat/posix/arpa",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/compat/posix/net",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/compat/posix/sys",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/compat/stdc",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/system/arch",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/FreeRTOS/Source/include",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F",
+                "c:/USER/GitHub/DINA/pio_new/LWIP/App",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/apps/http",
+                "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "c:/USER/GitHub/DINA/pio_new/Core/Inc",
+                    "c:/USER/GitHub/DINA/pio_new",
+                    "c:/USER/GitHub/DINA/pio_new/lib/STLinkedResources",
+                    "c:/USER/GitHub/DINA/pio_new/Patches",
+                    "c:/USER/GitHub/DINA/pio_new/Drivers/STM32H7xx_HAL_Driver/Inc",
+                    "c:/USER/GitHub/DINA/pio_new/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy",
+                    "c:/USER/GitHub/DINA/pio_new/Drivers/CMSIS/Device/ST/STM32H7xx/Include",
+                    "c:/USER/GitHub/DINA/pio_new/Drivers/CMSIS/Include",
+                    "c:/USER/GitHub/DINA/pio_new/Application/Tasks",
+                    "c:/USER/GitHub/DINA/pio_new/Application/Common",
+                    "c:/USER/GitHub/DINA/pio_new/Application/Modules",
+                    "c:/USER/GitHub/DINA/pio_new/Application/Modules/PARAM",
+                    "c:/USER/GitHub/DINA/pio_new/Application/Modules/FDCAN1",
+                    "c:/USER/GitHub/DINA/pio_new/Application/Modules/FDCAN2",
+                    "c:/USER/GitHub/DINA/pio_new/Application/Modules/ERROR",
+                    "c:/USER/GitHub/DINA/pio_new/Application/Modules/WEBS",
+                    "c:/USER/GitHub/DINA/pio_new/Application/Modules/UDPS",
+                    "c:/USER/GitHub/DINA/pio_new/LWIP/Target",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/system",
+                    "c:/USER/GitHub/DINA/pio_new/Drivers/BSP/Components/lan8742",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/netif/ppp",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/lwip",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/lwip/apps",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/lwip/priv",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/lwip/prot",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/netif",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/compat/posix",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/compat/posix/arpa",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/compat/posix/net",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/compat/posix/sys",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/include/compat/stdc",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/system/arch",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/FreeRTOS/Source/include",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F",
+                    "c:/USER/GitHub/DINA/pio_new/LWIP/App",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/LwIP/src/apps/http",
+                    "c:/USER/GitHub/DINA/pio_new/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
+                    ""
+                ]
+            },
+            "defines": [
+                "F_CPU=480000000L",
+                "PLATFORMIO=60106",
+                "STM32H7xx",
+                "STM32H743xx",
+                ""
+            ],
+            "compilerPath": "C:/Users/wjr/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/arm-none-eabi-gcc.exe",
+            "compilerArgs": [
+                "-mthumb",
+                "-mcpu=cortex-m7",
+                "-mthumb",
+                "-mcpu=cortex-m7",
+                "-mfpu=fpv5-d16",
+                "-mfloat-abi=hard",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,911 @@
+<html>
+<head>
+	<title>DINA</title>
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+	<link href="styles.css" rel="stylesheet">
+	<meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <meta charset="utf-8">
+</head>
+<body>
+	<header>
+        <div class="row">
+            <div class="column">
+                <!--
+                    <div class="title">DINA Komm-Modul (αlpha version)</div>
+                -->
+            </div>
+            <div class="column">
+				<a id="dina-logo_yellow" href="https://www.dina.de/">
+					<img src="img/dina_logo_yellow.png" alt="DINA logo" class="logo">
+				</a>
+            </div>
+        </div>
+    </header>
+
+	<div class="content">
+        <div id="navibar" class="navigation">
+            <div class="btn-group">
+                <button id="dummy-left" class="dummy">
+                    <span class="btns-border-left-active"></span>
+                </button>
+                <button id="Index" class="active-tab"> 
+                    <span id="index-btn">UDP Daten</span>
+                </button>
+                <a href="canframes.html" id="Canframes-href">
+                    <button id="Canframes">
+                        <span id="can-frames-btn" class="btn-right">CAN Daten</span>
+                    </button>
+                </a>
+                <a href="settings.html">
+                    <button id="Settings"> 
+                        <span id="settings-btn" class="btn">Einstellungen</span>
+                    </button>
+                </a>
+                <button id="dummy-right">
+                    <span id="nav-right-border" class="btns-border-right"></span>
+                </button>
+				<!--
+					<div class="dropdown">
+						<div class="language" id="lan">EN &#9662;</div>
+						<div class="dropdown-content">
+							<form action="index.htm" target="_self" method="POST">
+								<input type="submit" name="Language" class="english" value="EN">
+							</form>
+							<form action="index_de.htm" target="_self" method="POST">
+								<input type="submit" name="Language" class="deutsch" value="DE">
+							</form>
+						</div>
+					</div>
+				-->
+            </div>
+        </div>
+
+		<div class="row-layout">
+            <div class="column-layout">
+				<h2>Frame Header:</h2>	
+				<table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+							<th>Wert</th>
+						</tr>
+						<tr>
+							<td class="description">LJU Adresse</td>
+							<td id="addr_lju" class="value">0</td>
+						</tr>
+						<tr>
+							<td class="description">DINA Adresse</td>
+							<td id="addr_dina" class="value">0</td>
+						</tr>
+						<tr>
+							<td class="description">MSG ID</td>
+							<td id="msg_id" class="value">0</td>
+						</tr>
+						<tr>
+							<td class="description">MSG Zähler</td>
+							<td id="msg_cnt" class="value">0</td>
+						</tr>
+						<tr>
+							<td class="description">Status</td>
+							<td id="status" class="value">0</td>
+						</tr>
+						<tr>
+							<td class="description">Fehler Status</td>
+							<td id="err_status" class="value">0</td>
+						</tr>
+						<tr>
+							<td class="description">Fehlernummer</td>
+							<td id="err_nr" class="value">0</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>Logic Data: Byte11 - Byte74</h2>
+				<table class="info-bytes">
+					<tbody>
+						<tr>
+							<th>Byte</th>
+							<th>Wert</th>
+							<th>Byte</th>
+							<th>Wert</th>
+							<th>Byte</th>
+							<th>Wert</th>
+							<th>Byte</th>
+							<th>Wert</th>
+						</tr>
+						<tr>
+							<td>11</td>
+							<td id="byte_11" class="value">0</td>
+							<td>12</td>
+							<td id="byte_12" class="value">0</td>
+							<td>13</td>
+							<td id="byte_13" class="value">0</td>
+							<td>14</td>
+							<td id="byte_14" class="value">0</td>
+						</tr>
+						<tr>
+							<td>15</td>
+							<td id="byte_15" class="value">0</td>
+							<td>16</td>
+							<td id="byte_16" class="value">0</td>
+							<td>17</td>
+							<td id="byte_17" class="value">0</td>
+							<td>18</td>
+							<td id="byte_18" class="value">0</td>
+						</tr>
+						<tr>
+							<td>19</td>
+							<td id="byte_19" class="value">0</td>
+							<td>20</td>
+							<td id="byte_20" class="value">0</td>
+							<td>21</td>
+							<td id="byte_21" class="value">0</td>
+							<td>22</td>
+							<td id="byte_22" class="value">0</td>
+						</tr>
+						<tr>
+							<td>23</td>
+							<td id="byte_23" class="value">0</td>
+							<td>24</td>
+							<td id="byte_24" class="value">0</td>
+							<td>25</td>
+							<td id="byte_25" class="value">0</td>
+							<td>26</td>
+							<td id="byte_26" class="value">0</td>
+						</tr>
+						<tr>
+							<td>27</td>
+							<td id="byte_27" class="value">0</td>
+							<td>28</td>
+							<td id="byte_28" class="value">0</td>
+							<td>29</td>
+							<td id="byte_29" class="value">0</td>
+							<td>30</td>
+							<td id="byte_30" class="value">0</td>
+						</tr>
+						<tr>
+							<td>31</td>
+							<td id="byte_31" class="value">0</td>
+							<td>32</td>
+							<td id="byte_32" class="value">0</td>
+							<td>33</td>
+							<td id="byte_33" class="value">0</td>
+							<td>34</td>
+							<td id="byte_34" class="value">0</td>
+						</tr>
+						<tr>
+							<td>35</td>
+							<td id="byte_35" class="value">0</td>
+							<td>36</td>
+							<td id="byte_36" class="value">0</td>
+							<td>37</td>
+							<td id="byte_37" class="value">0</td>
+							<td>38</td>
+							<td id="byte_38" class="value">0</td>
+						</tr>
+						<tr>
+							<td>39</td>
+							<td id="byte_39" class="value">0</td>
+							<td>40</td>
+							<td id="byte_40" class="value">0</td>
+							<td>41</td>
+							<td id="byte_41" class="value">0</td>
+							<td>42</td>
+							<td id="byte_42" class="value">0</td>
+						</tr>
+						<tr>
+							<td>43</td>
+							<td id="byte_33" class="value">0</td>
+							<td>34</td>
+							<td id="byte_34" class="value">0</td>
+							<td>35</td>
+							<td id="byte_35" class="value">0</td>
+							<td>36</td>
+							<td id="byte_36" class="value">0</td>
+						</tr>
+						<tr>
+							<td>47</td>
+							<td id="byte_47" class="value">0</td>
+							<td>48</td>
+							<td id="byte_48" class="value">0</td>
+							<td>49</td>
+							<td id="byte_49" class="value">0</td>
+							<td>50</td>
+							<td id="byte_50" class="value">0</td>
+						</tr>
+						<tr>
+							<td>51</td>
+							<td id="byte_51" class="value">0</td>
+							<td>52</td>
+							<td id="byte_52" class="value">0</td>
+							<td>53</td>
+							<td id="byte_53" class="value">0</td>
+							<td>54</td>
+							<td id="byte_54" class="value">0</td>
+						</tr>
+						<tr>
+							<td>55</td>
+							<td id="byte_55" class="value">0</td>
+							<td>56</td>
+							<td id="byte_56" class="value">0</td>
+							<td>57</td>
+							<td id="byte_57" class="value">0</td>
+							<td>58</td>
+							<td id="byte_58" class="value">0</td>
+						</tr>
+						<tr>
+							<td>59</td>
+							<td id="byte_59" class="value">0</td>
+							<td>60</td>
+							<td id="byte_60" class="value">0</td>
+							<td>61</td>
+							<td id="byte_61" class="value">0</td>
+							<td>62</td>
+							<td id="byte_62" class="value">0</td>
+						</tr>
+						<tr>
+							<td>63</td>
+							<td id="byte_63" class="value">0</td>
+							<td>64</td>
+							<td id="byte_64" class="value">0</td>
+							<td>65</td>
+							<td id="byte_65" class="value">0</td>
+							<td>66</td>
+							<td id="byte_66" class="value">0</td>
+						</tr>
+						<tr>
+							<td>67</td>
+							<td id="byte_67" class="value">0</td>
+							<td>68</td>
+							<td id="byte_68" class="value">0</td>
+							<td>69</td>
+							<td id="byte_69" class="value">0</td>
+							<td>70</td>
+							<td id="byte_70" class="value">0</td>
+						</tr>
+						<tr>
+							<td>71</td>
+							<td id="byte_71" class="value">0</td>
+							<td>72</td>
+							<td id="byte_72" class="value">0</td>
+							<td>73</td>
+							<td id="byte_73" class="value">0</td>
+							<td>74</td>
+							<td id="byte_74" class="value">0</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>Reserve: Byte75 - Byte79</h2>
+				<table class="info-bytes">
+					<tbody>
+						<tr>
+							<th>Byte</th>
+							<th>Wert</th>
+							<th>Byte</th>
+							<th>Wert</th>
+						</tr>
+						<tr>
+							<td>75</td>
+							<td id="byte_75" class="value">0</td>
+							<td>76</td>
+							<td id="byte_76" class="value">0</td>
+						</tr>
+						<tr>
+							<td>77</td>
+							<td id="byte_77" class="value">0</td>
+							<td>78</td>
+							<td id="byte_78" class="value">0</td>
+						</tr>
+						<tr>
+							<td>79</td>
+							<td id="byte_79" class="value">0</td>
+							<td id="byte_none">-</td>
+							<td id="value_none" class="value">-</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>Frame CRC: Byte200 - Byte201</h2>
+				<table class="info-bytes">
+					<tbody>
+						<tr>
+							<th>Byte</th>
+							<th>Wert</th>
+							<th>Byte</th>
+							<th>Wert</th>
+						</tr>
+						<tr>
+							<td>200</td>
+							<td id="byte_200" class="value">0</td>
+							<td>201</td>
+							<td id="byte_201" class="value">0</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>Misc</h2>
+				<div class="misc">
+				</div>
+			</div>
+
+			<div class="column-layout">
+				<h2>Encoder 1: Byte80 - Byte89</h2>
+				<table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+							<th>Wert</th>
+							<th>Einheit</th>
+						</tr>
+						<tr>
+							<td class="description">Position</td>
+							<td id="enco_1_pos" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Geschwindigkeit</td>
+							<td id="enco_1_speed" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 1</td>
+							<td id="enco_1_status_1" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 2</td>
+							<td id="enco_1_status_2" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 3</td>
+							<td id="enco_1_status_3" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 4</td>
+							<td id="enco_1_status_4" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 5</td>
+							<td id="enco_1_status_5" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>Encoder 3: Byte100 - Byte109</h2>
+				<table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+							<th>Wert</th>
+							<th>Einheit</th>
+						</tr>
+						<tr>
+							<td class="description">Position</td>
+							<td id="enco_3_pos" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Geschwindigkeit</td>
+							<td id="enco_3_speed" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 1</td>
+							<td id="enco_3_status_1" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 2</td>
+							<td id="enco_3_status_2" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 3</td>
+							<td id="enco_3_status_3" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 4</td>
+							<td id="enco_3_status_4" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 5</td>
+							<td id="enco_3_status_5" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>Encoder 5: Byte120 - Byte129</h2>
+				<table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+							<th>Wert</th>
+							<th>Einheit</th>
+						</tr>
+						<tr>
+							<td class="description">Position</td>
+							<td id="enco_5_pos" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Geschwindigkeit</td>
+							<td id="enco_5_speed" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 1</td>
+							<td id="enco_5_status_1" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 2</td>
+							<td id="enco_5_status_2" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 3</td>
+							<td id="enco_5_status_3" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 4</td>
+							<td id="enco_5_status_4" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 5</td>
+							<td id="enco_5_status_5" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>Encoder 7: Byte140 - Byte149</h2>
+				<table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+							<th>Wert</th>
+							<th>Einheit</th>
+						</tr>
+						<tr>
+							<td class="description">Position</td>
+							<td id="enco_7_pos" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Geschwindigkeit</td>
+							<td id="enco_7_speed" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 1</td>
+							<td id="enco_7_status_1" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 2</td>
+							<td id="enco_7_status_2" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 3</td>
+							<td id="enco_7_status_3" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 4</td>
+							<td id="enco_7_status_4" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 5</td>
+							<td id="enco_7_status_5" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>Encoder 9: Byte160 - Byte169</h2>
+				<table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+							<th>Wert</th>
+							<th>Einheit</th>
+						</tr>
+						<tr>
+							<td class="description">Position</td>
+							<td id="enco_9_pos" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Geschwindigkeit</td>
+							<td id="enco_9_speed" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 1</td>
+							<td id="enco_9_status_1" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 2</td>
+							<td id="enco_9_status_2" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 3</td>
+							<td id="enco_9_status_3" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 4</td>
+							<td id="enco_9_status_4" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 5</td>
+							<td id="enco_9_status_5" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>Encoder 11: Byte180 - Byte189</h2>
+				<table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+							<th>Wert</th>
+							<th>Einheit</th>
+						</tr>
+						<tr>
+							<td class="description">Position</td>
+							<td id="enco_11_pos" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Geschwindigkeit</td>
+							<td id="enco_11_speed" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 1</td>
+							<td id="enco_11_status_1" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 2</td>
+							<td id="enco_11_status_2" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 3</td>
+							<td id="enco_11_status_3" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 4</td>
+							<td id="enco_11_status_4" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 5</td>
+							<td id="enco_11_status_5" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+
+			<div class="column-layout">
+				<h2>Encoder 2: Byte90 - Byte99</h2>
+				<table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+							<th>Wert</th>
+							<th>Einheit</th>
+						</tr>
+						<tr>
+							<td class="description">Position</td>
+							<td id="enco_2_pos" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Geschwindigkeit</td>
+							<td id="enco_2_speed" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 1</td>
+							<td id="enco_2_status_1" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 2</td>
+							<td id="enco_2_status_2" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 3</td>
+							<td id="enco_2_status_3" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 4</td>
+							<td id="enco_2_status_4" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 5</td>
+							<td id="enco_2_status_5" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>Encoder 4: Byte110 - Byte119</h2>
+				<table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+							<th>Wert</th>
+							<th>Einheit</th>
+						</tr>
+						<tr>
+							<td class="description">Position</td>
+							<td id="enco_4_pos" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Geschwindigkeit</td>
+							<td id="enco_4_speed" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 1</td>
+							<td id="enco_4_status_1" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 2</td>
+							<td id="enco_4_status_2" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 3</td>
+							<td id="enco_4_status_3" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 4</td>
+							<td id="enco_4_status_4" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 5</td>
+							<td id="enco_4_status_5" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>Encoder 6: Byte130 - Byte139</h2>
+				<table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+							<th>Wert</th>
+							<th>Einheit</th>
+						</tr>
+						<tr>
+							<td class="description">Position</td>
+							<td id="enco_6_pos" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Geschwindigkeit</td>
+							<td id="enco_6_speed" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 1</td>
+							<td id="enco_6_status_1" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 2</td>
+							<td id="enco_6_status_2" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 3</td>
+							<td id="enco_6_status_3" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 4</td>
+							<td id="enco_6_status_4" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 5</td>
+							<td id="enco_6_status_5" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>Encoder 8: Byte150 - Byte159</h2>
+				<table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+							<th>Wert</th>
+							<th>Einheit</th>
+						</tr>
+						<tr>
+							<td class="description">Position</td>
+							<td id="enco_8_pos" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Geschwindigkeit</td>
+							<td id="enco_8_speed" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 1</td>
+							<td id="enco_8_status_1" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 2</td>
+							<td id="enco_8_status_2" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 3</td>
+							<td id="enco_8_status_3" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 4</td>
+							<td id="enco_8_status_4" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 5</td>
+							<td id="enco_8_status_5" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>Encoder 10: Byte170 - Byte179</h2>
+				<table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+							<th>Wert</th>
+							<th>Einheit</th>
+						</tr>
+						<tr>
+							<td class="description">Position</td>
+							<td id="enco_10_pos" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Geschwindigkeit</td>
+							<td id="enco_10_speed" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 1</td>
+							<td id="enco_10_status_1" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 2</td>
+							<td id="enco_10_status_2" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 3</td>
+							<td id="enco_10_status_3" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 4</td>
+							<td id="enco_10_status_4" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 5</td>
+							<td id="enco_10_status_5" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>Encoder 12: Byte190 - Byte199</h2>
+				<table class="info">
+					<tbody>
+						<tr>
+							<th>Beschreibung</th>
+							<th>Wert</th>
+							<th>Einheit</th>
+						</tr>
+						<tr>
+							<td class="description">Position</td>
+							<td id="enco_12_pos" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Geschwindigkeit</td>
+							<td id="enco_speed" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 1</td>
+							<td id="enco_12_status_1" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 2</td>
+							<td id="enco_12_status_2" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 3</td>
+							<td id="enco_12_status_3" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 4</td>
+							<td id="enco_12_status_4" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+						<tr>
+							<td class="description">Status 5</td>
+							<td id="enco_12_status_5" class="value">0</td>
+							<td class="unit">-</td>
+						</tr>
+					</tbody>
+				</table>	
+			</div>
+		</div>
+
+		<div class="row-layout">
+			<footer>
+				<!--
+					<div class="copyright">
+						<p>2023 <a id="dina-link" href="https://www.dina.de/">DINA</a> &copy;</p> 
+					</div>
+				-->
+				<a href="https://www.dina.de/">
+					<img src="img/dina_logo_yellow.png" alt="DINA logo" class="logo_footer">
+				</a>
+			</footer>
+		</div>
+	</div>
+
+	<script src="jscript.js" type="text/javascript">
+	</script>
+	
+</body>
+</html>
+

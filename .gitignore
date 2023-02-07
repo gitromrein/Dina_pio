@@ -1,0 +1,85 @@
+#-----------------------------------------------
+# .gitignore for cppcheck
+#-----------------------------------------------
+.check/*
+
+#-----------------------------------------------
+# .gitignore for STM32Cube
+#-----------------------------------------------
+# STM32Cube copied library and project folders
+#Drivers/*
+#MDK-ARM/*
+#EWARM/*
+
+# CrossWorks project files
+#!*/*.hzp
+#!*/*.hzs
+
+# STM32CubeMX tempfiles
+.mxproject
+
+# build directory
+build
+
+# Debug directory
+
+
+# Special files
+*.mk
+*.list
+
+#-----------------------------------------------
+# .gitignore for c (see https://github.com/github/gitignore)
+#-----------------------------------------------
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
