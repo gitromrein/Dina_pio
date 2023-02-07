@@ -79,7 +79,8 @@ jobs:
         run: platformio test -e extra_unity_options
   
   build_and_check_ubuntu_sonar:
-    name: build with plattformio cli, run static code analysis on sonarcloud.io   
+    name: build with plattformio cli,|
+      run static code analysis on sonarcloud.io   
     runs-on: ubuntu-latest
     env:
       BUILD_WRAPPER_OUT_DIR: build_wrapper_output_directory # Directory where build-wrapper output will be placed
