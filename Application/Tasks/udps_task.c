@@ -29,7 +29,11 @@
  *********************************************************************/
 #include "cmsis_os.h"
 #include "tasks_defs.h"
-#include "typedefs.h"
+
+//WR
+/* #include "typedefs.h" */
+#include "../Common/typedefs.h"
+
 #include "lwip/udp.h"
 #include "lwip/opt.h"
 #include "lwip/api.h"
