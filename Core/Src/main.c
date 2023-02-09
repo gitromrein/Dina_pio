@@ -25,11 +25,17 @@
 /* USER CODE BEGIN Includes */
 #include "lwip/udp.h"
 #include "lwip/apps/httpd.h"
+
+//WR
 /* #include "webs.h" */
 #include "../../Application/Modules/WEBS/webs.h"
 #include <string.h>
-#include "typedefs.h"
-#include "tasks_defs.h"
+
+//WR
+/* #include "typedefs.h"
+#include "tasks_defs.h" */
+#include "../../Application/Common/typedefs.h"
+#include "../../Application/Tasks/tasks_defs.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
