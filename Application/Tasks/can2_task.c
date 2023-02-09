@@ -34,7 +34,6 @@
 /* #include "typedefs.h" */
 #include "../Common/typedefs.h"
 
-#include "typedefs.h"
 #include "stm32h7xx.h"
 #include "stm32h7xx_hal_fdcan.h"
 #include <stdio.h>
