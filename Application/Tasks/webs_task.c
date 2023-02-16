@@ -30,12 +30,20 @@
 #include <string.h>
 #include <stdio.h>
 #include "fs.h"
-#include "typedefs.h"
+
+//WR
+/* #include "typedefs.h" */
+#include "../Common/typedefs.h"
+
 #include "lwip/opt.h"
 #include "lwip/arch.h"
 #include "lwip/api.h"
 #include "lwip/apps/fs.h"
-#include "webs.h"
+
+//WR
+/* #include "webs.h" */
+#include "../Modules/WEBS/webs.h"
+	
 #include "cmsis_os.h"
 
 /*
