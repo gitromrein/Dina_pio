@@ -11,6 +11,11 @@
 #MDK-ARM/*
 #EWARM/*
 
+#-----------------------------------------------
+# .gitignore for VisualStudioCode
+#-----------------------------------------------
+.vscode/*
+
 # CrossWorks project files
 #!*/*.hzp
 #!*/*.hzs
