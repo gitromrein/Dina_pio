@@ -636,17 +636,17 @@ uint16_t SSI_Handler (int iIndex, char *pcInsert, int iInsertLen)
 //		sprintf(pcInsert, "%d", cnt++);
 		sprintf(pcInsert, "%d", udp_tx.data.encoder_1.position.byte.HB);
 		return strlen(pcInsert);
-		break;
+		//break;
 	case 1:
 //		sprintf(pcInsert, "%d", cnt++);
 		sprintf(pcInsert, "%d", udp_tx.data.encoder_1.speed.value);
 		return strlen(pcInsert);
-		break;
+		//break;
 	case 2:
 //		sprintf(pcInsert, "%d", cnt++);
 		sprintf(pcInsert, "%d", udp_tx.data.encoder_1.status_1.value);
 		return strlen(pcInsert);
-		break;
+		//break;
 	default :
 		break;
 	}
