@@ -134,6 +134,9 @@ jobs:
           java-version: 11
       - name: Run Code Analyse CppCheck
         run: pio check
+      - name: install gcovr 5.0
+        run: |
+          pip install gcovr==5.0 # 5.1 is not supported
       - name: Install sonar-scanner and build-wrapper
         uses: SonarSource/sonarcloud-github-c-cpp@v1
       - name: Run build-wrapper
@@ -149,9 +152,15 @@ jobs:
         with:
           name: firware
           path: .pio/build/debug/firmware.*
+      - name: Collect coverage into one XML report
+        run: |
+          gcovr --sonarqube > coverag.xml
       - name: Run sonar-scanner
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          sonar-scanner --define sonar.cfamily.build-wrapper-output="${{ env.BUILD_WRAPPER_OUT_DIR }}" 
+          #sonar-scanner --define sonar.cfamily.build-wrapper-output="${{ env.BUILD_WRAPPER_OUT_DIR }}" 
+          sonar-scanner \
+            --define sonar.cfamily.build-wrapper-output="${{ env.BUILD_WRAPPER_OUT_DIR }}" \
+            --define sonar.coverageReportPaths=coverag.xml
