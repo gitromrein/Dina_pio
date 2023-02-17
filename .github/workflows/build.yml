@@ -155,6 +155,8 @@ jobs:
       - name: Collect coverage into one XML report
         run: |
           gcovr --sonarqube > coverag.xml
+      - run: ls
+      - run: cat coverag.xml
       - name: Run sonar-scanner
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
