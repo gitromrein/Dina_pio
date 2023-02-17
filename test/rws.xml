@@ -2,4 +2,7 @@
   <file path="test/sonar.xml">
     <lineToCover lineNumber="2" covered="true"/>
   </file>
+  <file path="setup_cubemx_env_auto.py">
+    <lineToCover lineNumber="12" covered="true"/>
+  </file>
 </coverage>
